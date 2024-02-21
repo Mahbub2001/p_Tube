@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTube</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="bg-white text-black">
+    <div class="flex justify-end mr-5 mt-5">
+        <button
+            class="bg-violet-500 px-2 py-2 rounded text-white hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ...">
+            <a href="./index.html">Back</a>
+        </button>
+    </div>
+    <main class="mt-10 mb-20">
+        <h1 class="text-center mb-10 text-5xl">BLOGS</h1>
+        <section class="container mx-auto ">
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border border-base-300">
+                    <input type="radio" name="my-accordion-4" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">
+                        Discuss about the scope of var, let, and const. </div>
+                    <div class="collapse-content">
+                        <h1><small class="font-bold text-[1rem]">Var:</small></h1>
+                        <p>Variables declared with var have function scope or global scope. They are accessible
+                            throughout the entire function or the entire JavaScript program if declared globally.
+                            var variables are hoisted to the top of their function or global scope.
+                            They can be re-declared and updated within their scope.</p>
+                        <h1 class="my-3">Example</h1>
+                        <pre>
+                                function exampleFunction() {
+                                    if (true) {
+                                        var x = 10;
+                                    }
+                                    console.log(x); // Outputs 10
+                                }
+                                console.log(x); // Throws ReferenceError: x is not defined
+                        </pre>
+                        <h1><small class="font-bold text-[1rem]">Let:</small></h1>
+                        <p>Variables declared with let have block scope. They are only accessible within the block they
+                            were declared. let variables are hoisted to the top of their block scope.
+                            They can be updated but not re-declared within their scope.</p>
+                        <pre>
+                                function exampleFunction() {
+                                    if (true) {
+                                        let y = 20;
+                                        console.log(y); // Outputs 20
+                                    }
+                                    console.log(y); // Throws ReferenceError: y is not defined
+                                }
+                                
+                        </pre>
+                        <h1><small class="font-bold text-[1rem]">Const:</small></h1>
+                        <p>Variables declared with const have block scope. They are only accessible within the block
+                            they
+                            were declared. const variables are hoisted to the top of their block scope.
+                            They cannot be updated or re-declared within their scope.</p>
+                        <pre>
+                            function exampleFunction() {
+                                const z = 30;
+                                z = 40; // Throws TypeError: Assignment to constant variable.
+                            }                            
+                        </pre>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border border-base-300">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">
+                        Tell the use cases of NULL and Undefined </div>
+                    <div class="collapse-content">
+                        <h1 class="text-[1rem]"><small class="font-bold">NULL: </small></h1>
+                        <p>null is a primitive value that represents the intentional absence of any object value. It is
+                            explicitly assigned by developers to signify that a variable has no value or that it is
+                            empty.
+                            It can be used to reset or clear a variable that previously held an object reference.
+                            It is often used in conditions to explicitly check if a value is absent or has been
+                            intentionally set to null.</p>
+                        <pre>
+                                let x = null;
+                                console.log(x); // Outputs null
+                            </pre>
+                        <h1 class="text-[1rem]"><small class="font-bold">Undefined:</small></h1>
+                        <p>undefined is a primitive value that indicates a variable has been declared but has not been
+                            assigned a value. It also represents the value returned by a function that does not
+                            explicitly return anything.
+                            Variables that are declared but not initialized are automatically assigned the value
+                            undefined.
+                            It is often used to check if a variable has been initialized or defined.</p>
+                        <pre>
+                                let y;
+                                console.log(y); // Outputs undefined
+                            </pre>
+                        </pre>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border border-base-300">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">
+                        What do you mean by REST API?
+                    </div>
+                    <div class="collapse-content">
+                        <pre>
+                            REST API, which stands for Representational State Transfer Application 
+                            Programming Interface, is an architectural style for designing networked 
+                            applications. It is a set of principles and constraints that developers 
+                            follow to create scalable and loosely coupled web services. REST is not 
+                            a standard or protocol itself, but rather a set of guidelines and best 
+                            practices.
+
+                            Key principles and characteristics of RESTful APIs include:
+
+                            1. Statelessness: Each request from a client to a server must contain
+                             all the information needed to understand and fulfill that request. 
+                             The server should not store any information about the client's state 
+                             between requests.
+
+                            2. Resource-Based: In a REST API, resources (such as data objects or 
+                            services) are identified by URIs (Uniform Resource Identifiers). 
+                            Resources can be manipulated using standard HTTP methods like GET, POST, 
+                            PUT, and DELETE.
+
+                            3. Representation: Resources are represented in a format that can be
+                             easily consumed by the client, such as JSON or XML. The representation 
+                             can include the current state of the resource and links to related 
+                             resources.
+
+                            4. Uniform Interface: REST APIs should have a uniform and consistent 
+                            interface, which simplifies interactions and promotes scalability. This 
+                            includes a common set of conventions for naming resources and using 
+                            standard HTTP methods.
+
+                            5. Stateless Communication: Communication between the client and 
+                            server is stateless, meaning that each request from a client contains 
+                            all the information needed to understand and process the request. The 
+                            server does not store any information about the client's state between
+                             requests.
+
+                            6. Idempotence: Certain HTTP methods (such as GET, PUT, and DELETE) 
+                            should be idempotent, meaning that multiple identical requests have the 
+                            same effect as a single request. This ensures that making the same 
+                            request multiple times does not produce different outcomes.
+
+                            RESTful APIs are widely used in web development for building scalable 
+                            and interoperable systems. They are often preferred for their simplicity,
+                            scalability, and compatibility with HTTP, making them suitable for a 
+                            variety of applications, including web and mobile development.
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</html>

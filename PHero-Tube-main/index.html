@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTube</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <div class="flex gap-1 justify-between ml-10 items-center mr-10 mt-5">
+                <div class="logo mt-3"><img src="./Logo.png" alt="" srcset=""></div>
+                <div>
+                    <button onclick="sortByView()" class="rounded ort-by-view bg-gray-300 px-1 py-1 md:px-3 md:py-1.5">Sort By
+                        View</button>
+                </div>
+                <div>
+                    <button class="blog">
+                        <a class="bg-[#FF1F3D] px-1 py-1 md:px-4 md:py-1.5 rounded text-white" target=”_blank” href="blog.html">Blog</a>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <hr class="my-4">
+            </div>
+            <div class="flex justify-center items-center">
+                <div id="category_div" class="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center items-center  mb-10">
+
+                </div>
+            </div>
+            <div class="container mx-auto px-3">
+              <div class="flex justify-center items-center">
+                <div id="video_div"
+                    class="mb-10 container mx-auto gap-5 grid justify-center items-center  grid-col-1 md:grid-cols-2 lg:grid-cols-4">
+                </div>
+            </div>  
+            </div>
+            
+        </section>
+    </main>
+</body>
+<script src="./script.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</html>

@@ -1,0 +1,16 @@
+.category {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .category.active #cat {
+    background-color: red;
+     color: white;
+  }
+  
+  .category #cat {
+    background-color: #d1d5db;
+    color: black; /* gray-300 */
+  }
+  
